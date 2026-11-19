@@ -1,0 +1,15 @@
+[package]
+name = "crypt4gh-ranges"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "Apache-2.0"
+description = "Byte-range planning for Crypt4GH files: plaintext ranges to ciphertext segments and data edit lists. No I/O, no crypto."
+repository = "https://github.com/SynapticFour/crypt4gh-ranges"
+keywords = ["crypt4gh", "ga4gh", "htsget", "genomics"]
+categories = ["encoding", "science"]
+
+[dependencies]
+
+[dev-dependencies]
+proptest = "1"
