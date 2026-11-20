@@ -1,5 +1,11 @@
 # crypt4gh-ranges
 
+> **Archived, not maintained (2026-11-20).** Ferrum builds htsget region tickets with
+> [htsget-rs](https://github.com/umccr/htsget-rs) and Crypt4GH with
+> [crypt4gh-rust](https://github.com/EGA-archive/crypt4gh-rust) instead of this crate (decision in
+> [Ferrum `docs/HTSGET-REGIONS-DESIGN.md`](https://github.com/SynapticFour/Ferrum/blob/main/docs/HTSGET-REGIONS-DESIGN.md)).
+> Nothing depends on it. The code stays readable under Apache-2.0; it was never published to crates.io.
+
 Byte-range planning for [Crypt4GH](https://samtools.github.io/hts-specs/crypt4gh.pdf) files. Given plaintext byte ranges, it tells a server:
 
 - which 64 KiB segments to read, and where they sit in the ciphertext;
@@ -8,7 +14,7 @@ Byte-range planning for [Crypt4GH](https://samtools.github.io/hts-specs/crypt4gh
 
 No I/O, no cryptography, no dependencies. Bring your own storage and your own Crypt4GH implementation; this crate does the arithmetic and is property-tested.
 
-Used by [Ferrum](https://github.com/SynapticFour/Ferrum) for htsget region tickets and HTTP `Range` on encrypted DRS objects, and by Synaptic Core for Crypt4GH streaming. Design: [Ferrum `docs/HTSGET-REGIONS-DESIGN.md`](https://github.com/SynapticFour/Ferrum/blob/main/docs/HTSGET-REGIONS-DESIGN.md).
+It was written for Ferrum's htsget region tickets; see the notice above.
 
 ```rust
 use crypt4gh_ranges::{plan, PlainRange};
